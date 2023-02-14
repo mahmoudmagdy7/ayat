@@ -12,7 +12,7 @@ var users = JSON.parse(localStorage.getItem('users_db')) // array of users
 var logoutBtn = document.querySelector('.logoutBtn');
 
 
-userName.innerHTML = `welcome ${users[JSON.parse(localStorage.getItem('user_name'))].user_name}` // shoe the welcome message with user name
+userName.innerHTML = `مرحباً ${users[JSON.parse(localStorage.getItem('user_name'))].user_name}` // shoe the welcome message with user name
 
 logoutBtn.addEventListener('click', logout)
 
