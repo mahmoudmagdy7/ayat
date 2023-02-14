@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title> Login </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- trying to fix http security -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=\, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +25,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <!-- test the update -->
+
 <body class="py-3 rtl">
   <div class="container text-center">
     <nav class="navbar ">
@@ -42,7 +45,7 @@
         <input class="form-control rounded-3 my-3" type="password" id="password" placeholder="أدخل كلمة المرور">
 
         <p class="validate-text d-none text-end text-danger my- rounded-1"> خطأ في البريد الالكتروني او
-           كلمة المرور !</p>
+          كلمة المرور !</p>
         <button class=" loginBtn btn main-bg text-white mt-3 "> تسجيل الدخول </button>
 
         <p class=" sign mt-4 text-dark-emphasis"> لا تملك حساب ؟<a class='text-decoration-none fw-bolder '
