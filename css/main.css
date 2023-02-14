@@ -1,0 +1,76 @@
+.warning,
+.maxLength {
+  display: none;
+}
+
+/******************************/
+#tbody {
+  vertical-align: middle !important;
+}
+/******************************/
+#bookmarkItem {
+  border-left: solid 7px;
+  box-shadow: 0px 4px 10px 0px #24242417;
+}
+/******************************/
+#bookmarkList {
+  transition: all 0.5s;
+}
+/* fix long title */
+h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* fix responsive */
+@media screen and (max-width: 425px) {
+  #bookmarkItem {
+    justify-content: center !important;
+  }
+}
+
+/*************************************/
+:root {
+  --c-err: #f62525;
+  --c-muted-red: #ff5543;
+
+  --c-dark: #040911;
+  --c-medium-gray: rgba(0, 0, 0, 0.6);
+  --c-light-gray: #e5e5e5;
+}
+
+.sign > a {
+  color: var(--c-dark) !important;
+}
+body {
+  background-color: var(--c-light-gray);
+  font-family: "Kitab";
+}
+.main-text {
+  color: var(--c-muted-red) !important;
+}
+.main-bg {
+  background-color: var(--c-muted-red) !important;
+}
+
+.fo-ibm {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+}
+
+@font-face {
+  font-family: "Kitab";
+  src: url("//cdn.alquran.cloud/public/fonts/Kitab-Regular.ttf");
+}
+
+.font-kitab {
+  font-family: "Kitab";
+}
+
+@font-face {
+  font-family: "Kitab Bold";
+  src: url("//cdn.alquran.cloud/public/fonts/Kitab-Bold.ttf");
+}
+
+.font-kitab-bold {
+  font-family: "Kitab Bold";
+}
