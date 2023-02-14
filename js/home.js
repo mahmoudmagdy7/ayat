@@ -38,7 +38,7 @@ function getData() {
 
   var surahApi = new XMLHttpRequest();
 
-  surahApi.open('get', `http://api.alquran.cloud/v1/ayah/${ayahNumber}/ar/`)
+  surahApi.open('get', `https://api.alquran.cloud/v1/ayah/${ayahNumber}/ar/`)
 
   surahApi.send()
 
