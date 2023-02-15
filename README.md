@@ -1,6 +1,6 @@
 # Ayat
 
-<img src="./favicon.png" width="300">
+<div style="text-align: center"><img src="./favicon.png" width="300"></div>
 ## Features
 
 - Random ayah from quran api.
