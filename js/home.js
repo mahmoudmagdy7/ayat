@@ -33,10 +33,11 @@ Returns an ayah for a given edition.
 {{reference}} here can be the ayah number or the surah:ayah. For instance, 262 or 2:255 will both get you Ayat Al Kursi
 {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
 */
+var surahApi
 function getData() {
   var ayahNumber = Math.floor(Math.random() * 6236)
 
-  var surahApi = new XMLHttpRequest();
+  surahApi = new XMLHttpRequest();
 
   surahApi.open('get', `https://api.alquran.cloud/v1/ayah/${ayahNumber}/ar`)
 
@@ -52,3 +53,33 @@ function getData() {
 getData()
 
 document.querySelector('.newAyah').addEventListener('click', getData)
+
+
+// notification system
+
+var surahNotification
+function getNotification() {
+  var ayahNumber = Math.floor(Math.random() * 6236)
+
+  surahNotification = new XMLHttpRequest();
+
+  surahNotification.open('get', `https://api.alquran.cloud/v1/ayah/${ayahNumber}/ar`)
+  surahNotification.send()
+  surahNotification.addEventListener('loadend', function () {
+  })
+}
+setInterval(getNotification, 7000);
+
+function notification() {
+  Notification.requestPermission().then(perm => {
+    if (perm === 'granted') {
+      new Notification('ayat', {
+        title: 'ayat notification',
+        body: JSON.parse(surahNotification.response).data.text,
+      })
+    }
+  })
+}
+
+
+setInterval(notification, 5000);
