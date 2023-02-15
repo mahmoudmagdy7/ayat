@@ -5,31 +5,34 @@
   <meta charset="UTF-8">
   <title> آيات </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" type="image/x-icon" href="fav.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <meta name="viewport" content="width=\, initial-scale=1.0">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body class=" text-white d-none">
-  <nav class="navbar bg-body-secondary shadow">
-    <div class="container px-4">
-      <a class="navbar-brand">
-        <!-- <img src="../fav.png" alt="Logo" width="30" class="d-inline-block align-text-top"> -->
-        <i class="fa-solid fa-mosque text-success"></i> آيات
-      </a>
-      <button class="logoutBtn btn btn-danger">تسجيل الخروج</button>
+  <nav class="navbar bg-white">
+    <div class="container px-4 row m-auto">
+      <a class="navbar-brand fs-3 col-md-3 text-sm-center d-flex justify-content-center "><i
+          class="fa-solid fa-mosque text-success mx-2"></i>آيات</a>
+      <div class="col-md-7 d-flex justify-content-between flex-row-reverse flex-md-row flex-lg-row  ">
+        <h2 class=" text-dark fs-4 fo-ibm">مرحباً <span class="main-text"></span></h2>
+        <a class=" logoutBtn text-decoration-none main-text fo-ibm fs-5">تسجيل الخروج</a>
+      </div>
     </div>
   </nav>
-  <div class="container text-center mt-5">
 
-    <h2 class="m-4 fs-1 text-dark">Welcome User</h2>
+
+  <div class="container text-center mt-5">
     <section class="text-dark bg-body p-4 rounded-2 ">
       <p id="ayah" class="fs-2"></p>
-      <p id="ayahDetails" class="fs-5 text-danger"></p>
+      <p id="ayahDetails" class="fs-4 main-text"></p>
     </section>
-    <button class="newAyah btn btn-dark mt-4">آية جديدة</button>
+    <button class="newAyah btn main-bg text-white mt-4 fs-4">آية جديدة</button>
   </div>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/home.js"></script>

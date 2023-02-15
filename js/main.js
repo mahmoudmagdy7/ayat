@@ -12,6 +12,10 @@ loginBtn.addEventListener('click', login)
 
 var userMach; // getting user id 
 function login() {
+ if(inputMail.value == '' || inputPassword == ''){
+  document.querySelector('.validate-text').classList.remove('d-none') // show validate message
+
+ }else{
   if (check()) {
     window.open('./pages/home.html', "_self") // redirect user to home page
   } else {
@@ -20,6 +24,7 @@ function login() {
     inputPassword.style.border = ' solid red 1px  '
     document.querySelector('.validate-text').classList.remove('d-none') // show validate message
   }
+ }
 }
 
 

@@ -35,6 +35,7 @@ function addUser() {
     if (check()) {
       console.log('valid');
       document.querySelector('.email-validation').classList.remove('d-none')
+      inputMail.style.border = ' solid red 1px  '
     } else {
       adding()
     }

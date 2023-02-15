@@ -7,12 +7,12 @@ if (localStorage.getItem('user_id') == null) { // if user id not found
 }
 
 // Setting the variables
-var userName = document.querySelector('h2'); // welcome message
+var userName = document.querySelector('h2 span'); // welcome message
 var users = JSON.parse(localStorage.getItem('users_db')) // array of users
 var logoutBtn = document.querySelector('.logoutBtn');
 
 
-userName.innerHTML = `مرحباً ${users[JSON.parse(localStorage.getItem('user_id'))].user_name}` // shoe the welcome message with user name
+userName.innerHTML = `${users[JSON.parse(localStorage.getItem('user_id'))].user_name}` // shoe the welcome message with user name
 
 logoutBtn.addEventListener('click', logout)
 
@@ -23,11 +23,11 @@ function logout() {
 };
 
 
-// api
-
-// http://api.alquran.cloud/v1/ayah/{{reference}}/{{edition}}
-// The Quran contains 6236 verses. With this endpoint, you can retrieve any of those verses.
 /*
+api
+
+http://api.alquran.cloud/v1/ayah/{{reference}}/{{edition}}
+The Quran contains 6236 verses. With this endpoint, you can retrieve any of those verses.
 
 Returns an ayah for a given edition.
 {{reference}} here can be the ayah number or the surah:ayah. For instance, 262 or 2:255 will both get you Ayat Al Kursi
@@ -51,12 +51,11 @@ function getData() {
   })
 }
 getData()
-
+getNotification()
 document.querySelector('.newAyah').addEventListener('click', getData)
 
 
 // notification system
-
 var surahNotification
 function getNotification() {
   var ayahNumber = Math.floor(Math.random() * 6236)
@@ -66,10 +65,16 @@ function getNotification() {
   surahNotification.open('get', `https://api.alquran.cloud/v1/ayah/${ayahNumber}/ar`)
   surahNotification.send()
   surahNotification.addEventListener('loadend', function () {
+    if (surahNotification.status == 200) {
+      notification()
+    } else {
+      console.log(surahNotification.status);
+    }
   })
 }
-setInterval(getNotification, 7000);
-
+getNotification()
+setInterval(getNotification, 1200000);
+// new notification method 
 function notification() {
   Notification.requestPermission().then(perm => {
     if (perm === 'granted') {
@@ -80,6 +85,3 @@ function notification() {
     }
   })
 }
-
-
-setInterval(notification, 5000);

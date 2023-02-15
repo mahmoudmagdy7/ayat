@@ -3,42 +3,35 @@
 
 <head>
   <meta charset="UTF-8">
-  <title> تسجيل الدخول </title>
+  <title> تسجيل الدخول | آيات </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- trying to fix http security -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=\, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="fav.png">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<!-- test the update -->
 
-<body class="py-3 rtl">
+<body class="pt-3 rtl">
   <div class="container text-center">
-    <nav class="navbar ">
+    <nav class="navbar mb-0">
       <div class="container-fluid px-4">
-        <div> <a class="navbar-brand fw-bold">تسجيل الدخول <i class="fa-regular fa-user"></i>
+        <div> <a class="navbar-brand fw-bold"> تسجيل الدخول <i class="fa-regular fa-user"></i>
           </a>
           <p class="fo-ibm fw-bold">مرحباً بك مرة أخري ،</p>
         </div>
       </div>
     </nav>
 
-    <section class=" p-4 rounded-2">
-      <img src="./body.png" alt="" class="img-fluid">
+    <section class=" px-4 rounded-2">
+      <img id='img-re' src="./body.png" alt="" class="img-fluid ">
       <h1 class="main-text mt-4 fw-bold">من فضلك قم بتسجيل الدخول</h1>
       <div class=" my-4 text-dark">
         <input class="form-control rounded-3 my-3 " type="email" id="mail" placeholder="أدخل البريد الالكتروني">
