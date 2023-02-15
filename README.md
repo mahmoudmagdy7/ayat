@@ -1,7 +1,4 @@
-
-# Ayat ![Logo](favicon.png)
-
-
+# Ayat <img src="./favicon.png" width="300">
 ## Features
 
 - Random ayah from quran api.
