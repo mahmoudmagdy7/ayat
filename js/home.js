@@ -1,6 +1,6 @@
 
 // Check if user is logged in 
-if (localStorage.getItem('user_name') == null) { // if user id not found 
+if (localStorage.getItem('user_id') == null) { // if user id not found 
   window.open('../index.html', '_self')// redirect to login 
 } else {
   document.body.classList.remove('d-none')
@@ -12,13 +12,13 @@ var users = JSON.parse(localStorage.getItem('users_db')) // array of users
 var logoutBtn = document.querySelector('.logoutBtn');
 
 
-userName.innerHTML = `مرحباً ${users[JSON.parse(localStorage.getItem('user_name'))].user_name}` // shoe the welcome message with user name
+userName.innerHTML = `مرحباً ${users[JSON.parse(localStorage.getItem('user_id'))].user_name}` // shoe the welcome message with user name
 
 logoutBtn.addEventListener('click', logout)
 
 // logout function
 function logout() {
-  localStorage.removeItem('user_name'); // removing user id 
+  localStorage.removeItem('user_id'); // removing user id 
   window.open('../index.html', '_self') // redirect to login page
 };
 

@@ -1,3 +1,4 @@
+
 // login page
 var users = JSON.parse(localStorage.getItem('users_db')) // getting users array
 // setting inputs 
@@ -22,13 +23,12 @@ function login() {
 }
 
 
-
 function check() {
 
   for (var i = 0; i < users.length; i++) {
     if (inputMail.value == users[i].user_mail && inputPassword.value == users[i].user_password) { // validate the data
       userMach = i;
-      localStorage.setItem('user_name', JSON.stringify(userMach)) // setting user id in the local storage
+      localStorage.setItem('user_id', JSON.stringify(userMach)) // setting user id in the local storage
       return true
     }
   }
@@ -44,4 +44,9 @@ function typing() {
   inputPassword.style.border = ' none '
 
   document.querySelector('.validate-text').classList.add('d-none')
+}
+
+// redirect user if already in
+if (localStorage.getItem('user_id') != null) {
+  window.open('./pages/home.html', '_self')
 }
