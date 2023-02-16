@@ -5,6 +5,12 @@
     margin-top: -70px !important;
   }
 }
+@media screen and (min-width: 992px) {
+  .form{
+    width: 50%;
+    margin: auto;
+  }
+}
 
 /*************************************/
 :root {
