@@ -28,7 +28,10 @@
       <h1 class="main-text mt-4 fw-bold">من فضلك قم بتسجيل بياناتك</h1>
       <div class="form my-4 text-dark">
         <input class="form-control my-3" type="text" id="name" placeholder="أدخل اسمك">
-        <input class="form-control rounded-3 my-3 " type="email" id="mail" placeholder="أدخل البريد الالكتروني">
+        <div class="text-end">
+          <input class="form-control rounded-3 mt-3 " type="email" id="mail" placeholder="أدخل البريد الالكتروني">
+          <small class="correct-mail d-none text-danger mx-1 ">- من فضلك ادخل بريد الكتروني صحيح</small>
+        </div>
         <input class="form-control rounded-3 my-3" type="password" id="password" placeholder="أدخل كلمة المرور">
         <p class="email-validation d-none text-end text-danger my- rounded-1"> البريد الالكتروني موجود بالفعل !</p>
 

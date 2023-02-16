@@ -1,3 +1,4 @@
+'use strict'
 
 // login page
 var users = JSON.parse(localStorage.getItem('users_db')) // getting users array
@@ -8,23 +9,31 @@ var inputMail = document.getElementById('mail'),
   loginBtn = document.querySelector('.loginBtn')
 
 // login function start
-loginBtn.addEventListener('click', login)
-
-var userMach; // getting user id 
-function login() {
- if(inputMail.value == '' || inputPassword == ''){
-  document.querySelector('.validate-text').classList.remove('d-none') // show validate message
-
- }else{
-  if (check()) {
-    window.open('./pages/home.html', "_self") // redirect user to home page
-  } else {
+loginBtn.addEventListener('click', () => {
+  if (localStorage.getItem('users_db') == null) {
     loginBtn.style.opacity = '0.6'
     inputMail.style.border = ' solid red 1px  '
     inputPassword.style.border = ' solid red 1px  '
     document.querySelector('.validate-text').classList.remove('d-none') // show validate message
+  } else{
+    login()
   }
- }
+})
+
+var userMach; // getting user id 
+function login() {
+  if (inputMail.value == '' || inputPassword == '') {
+    document.querySelector('.validate-text').classList.remove('d-none') // show validate message
+  } else {
+    if (check()) {
+      window.open('./pages/home.html', "_self") // redirect user to home page
+    } else {
+      loginBtn.style.opacity = '0.6'
+      inputMail.style.border = ' solid red 1px  '
+      inputPassword.style.border = ' solid red 1px  '
+      document.querySelector('.validate-text').classList.remove('d-none') // show validate message
+    }
+  }
 }
 
 

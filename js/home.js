@@ -1,4 +1,4 @@
-
+'use strict'
 // Check if user is logged in 
 if (localStorage.getItem('user_id') == null) { // if user id not found 
   window.open('../index.html', '_self')// redirect to login 
@@ -22,10 +22,8 @@ function logout() {
   window.open('../index.html', '_self') // redirect to login page
 };
 
-
 /*
 api
-
 http://api.alquran.cloud/v1/ayah/{{reference}}/{{edition}}
 The Quran contains 6236 verses. With this endpoint, you can retrieve any of those verses.
 
